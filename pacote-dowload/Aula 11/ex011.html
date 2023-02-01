@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+<body>
+    <h1>Em que país você mora?</h1>
+    <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id = 'res'>
+
+    </div>
+    <script>
+        function consultar(){
+            var país = document.getElementById('txtpaís')
+            var res = document.getElementById('res')
+            var nac = país.value
+            res.innerHTML = `<p>Seu país de origem é <strong>${nac}</strong></p>`
+            if(nac == 'Canadá'){
+                res.innerHTML += '<p>Você é Canadense</p>'
+            }else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+            }
+        }
+        
+    </script>
+</body>
+</html>
